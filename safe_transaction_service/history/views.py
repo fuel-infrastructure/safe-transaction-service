@@ -1107,8 +1107,8 @@ class SafeInfoView(GenericAPIView):
                 },
             )
 
-        if not SafeContract.objects.filter(address=address).exists():
-            return Response(status=status.HTTP_404_NOT_FOUND)
+        # if not SafeContract.objects.filter(address=address).exists():
+        #     return Response(status=status.HTTP_404_NOT_FOUND)
 
         try:
             # safe_info = SafeServiceProvider().get_safe_info(address)
@@ -1274,8 +1274,8 @@ class SafeMultisigTransactionEstimateView(GenericAPIView):
                 },
             )
 
-        if not SafeContract.objects.filter(address=address).exists():
-            return Response(status=status.HTTP_404_NOT_FOUND)
+        # if not SafeContract.objects.filter(address=address).exists():
+        #     return Response(status=status.HTTP_404_NOT_FOUND)
 
         # This endpoint is only needed for Safes < 1.3.0, so it should be disabled for L2 chains as they
         # don't support Safes below that version
